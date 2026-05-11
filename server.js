@@ -1837,8 +1837,6 @@ app.post('/api/events/create', verifyAdmin, eventUpload, async (req, res) => {
 
 
 
-
-
 // EVENTS UPDATE PUT
 app.put('/api/events/update/:id', verifyAdmin, eventUpload, async (req, res) => {
   try {
@@ -2853,7 +2851,7 @@ app.get('/api/admin/all-event-registrations', verifyAdmin, async (req, res) => {
   try {
     console.log('  Admin: Fetching all event registrations from MySQL');
     
-    // IMPROVED QUERY: JOIN with events table to get event_title
+    
     const sql = `
       SELECT 
         er.*,
