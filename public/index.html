@@ -7630,7 +7630,7 @@ async function loadEvents() {
       console.log('✅ Loaded', allEvents.length, 'events from cache');
       displayEvents();
       
-      // Fetch fresh data in background (don't await)
+      // Fetch fresh data in background 
       fetch('/api/events')
         .then(r => r.json())
         .then(result => {
@@ -7702,7 +7702,7 @@ function renderUnifiedEvents(upcoming = upcomingEvents, past = pastEvents) {
   
   let html = '';
 
-  // 1. UPCOMING EVENTS – heading above filter (in #eventsUpcomingHeading), cards in grid
+  // 1. UPCOMING EVENTS – heading above filter 
   if (upcoming.length > 0) {  
     const upcomingHeading = `
       <div class="flex items-center justify-center mb-4 md:mb-6">
