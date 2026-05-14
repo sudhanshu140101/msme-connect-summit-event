@@ -19,7 +19,7 @@ A complete CMS built for chamber/organization management — membership, events,
 
 
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack -
 
 | Layer      | Technology                          |
 |-----------|--------------------------------------|
