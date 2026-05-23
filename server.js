@@ -10,8 +10,6 @@ const bcrypt = require('bcryptjs');
 const nodemailer = require('nodemailer');
 
 
-
-
 const axios = require("axios");
 const crypto = require('crypto');
 
@@ -1634,7 +1632,6 @@ if (!rawBody || typeof rawBody !== 'string') {
             console.error('Received:', signature);
             return res.status(400).json({ success: false, message: 'Invalid signature' });
         }
-        
         
         
         // Parse body after verification
