@@ -31,7 +31,7 @@ A complete CMS built for chamber/organization management — membership, events,
 | File      | Multer, Sharp (images)               |
 | PDF       | pdf-lib, jsPDF                       |
 | Frontend  | Vanilla HTML/CSS/JS                  |
-| Optional  | Redis (sessions in production)      |
+| Optional  | Redis (sessions in production)       |
 
 ---
 
