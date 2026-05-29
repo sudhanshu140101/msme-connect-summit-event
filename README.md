@@ -1,4 +1,4 @@
-# CIMSME Chamber CMS
+# CIMSME Chamber CMS -
 
 **Full-stack Content Management System for the Chamber of Indian Micro, Small and Medium Enterprises (CIMSME).**
 
