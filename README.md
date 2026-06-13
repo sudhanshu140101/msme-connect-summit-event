@@ -1,54 +1,46 @@
-# CIMSME Chamber CMS -
+# MSME CONNECT Summit 2026
 
-**Full-stack Content Management System for the Chamber of Indian Micro, Small and Medium Enterprises (CIMSME).**
+Official event website for the **Chamber of Indian Micro, Small and Medium Enterprises (CIMSME)**, in association with **DMA**.
 
-A complete CMS built for chamber/organization management — membership, events, committees, chapters, payments (Cashfree), email (Zeptomail), and admin panel.
+A responsive landing page and registration system for **MSME CONNECT Summit 2026** — India's platform connecting MSMEs with government schemes, funding opportunities, and industry experts.
 
-🔗 **Live Website:** [https://indiansmechamber.com/](https://indiansmechamber.com)
+[Visit Website](https://msmeconnectsummit.indiansmechamber.com)
+## Features
 
-## 🚀 Features 
+### Public website
+- Single-page responsive event site (`index.html`)
+- Hero section with chief guest, date, venue, and highlights
+- Past event photo gallery and benefits slider
+- Summit topics, speakers, FAQs, and contact sections
+- Online registration modal with seat categories (Micro, Small, Medium, Startup, Professionals, Other)
+- WhatsApp quick contact and sticky “Register Now” CTA
+- Payment redirect via Razorpay link after form submission
 
-- **Admin Panel** — Dashboard, event management, membership applications, content management
-- **Membership** — Registration, plans, approval workflow, member login & dashboard
-- **Events** — Conferences, webinars, agenda, speakers, registration, event photos & videos
-- **Committees & Chapters** — Manage committees, chapter leaders, and regional chapters
-- **Payments** — Cashfree integration for membership fees and event registration
-- **Email** — Zeptomail for notifications and transactional emails
-- **Security** — JWT authentication, bcrypt passwords, rate limiting, Helmet
-- **Member Services** — Certificate download, profile, finance/legal/advisory service requests
+### Backend & admin
+- PHP REST-style API for registration submissions
+- CSRF protection and IP-based rate limiting
+- MySQL storage for registrations and optional file uploads
+- Admin panel to view, filter, export, and manage payment status
+- Secure admin login with session management and lockout protection
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | HTML5, CSS3, Vanilla JavaScript |
+| Backend | PHP 8+ |
+| Database | MySQL / MariaDB |
+| Server | Apache (with `.htaccess`) |
+
+## Project Structure
+
+MSME-Connect/ ├── index.html # Event landing page ├── styles.css # Site styles ├── script.js # Frontend logic & registration form ├── images/ # Logos, speakers, gallery assets ├── api/ │ ├── csrf.php # CSRF token endpoint │ └── submit.php # Registration submission API ├── admin/ # Admin dashboard & login ├── config/ # App & database configuration ├── database/ │ └── schema.sql # MySQL schema ├── includes/ # Auth, validation, repositories ├── storage/ # Logs & install lock (not committed) └── uploads/ # Uploaded files (not committed)
 
 
+## Requirements
+- PHP 8.0 or higher
+- MySQL 5.7+ or MariaDB 10.3+
+- Apache with `mod_rewrite` enabled
+- Composer **not** required (plain PHP project)
+## Installation
 
-## 🛠️ Tech Stack -
-
-| Layer      | Technology                          |
-|-----------|--------------------------------------|
-| Backend   | Node.js, Express.js                  |
-| Database  | MySQL                                |
-| Auth      | JWT (admin & member)                 |
-| Payments  | Cashfree PG                          |
-| Email     | Zeptomail                            |
-| File      | Multer, Sharp (images)               |
-| PDF       | pdf-lib, jsPDF                       |
-| Frontend  | Vanilla HTML/CSS/JS                  |
-| Optional  | Redis (sessions in production)       |
-
----
-
-## 📁 Project Structure
-├── server.js # Main Express app & API routes
-├── package.json
-├── .env.example # Environment template (copy to .env)
-├── database/
-│ └── schema-mysql.sql # MySQL schema
-├── models/
-│ └── database.js # DB connection & helpers
-├── middleware/
-│ ├── auth.middleware.js # JWT verify (admin/member)
-│ └── upload.middleware.js
-└── public/ # Static frontend
-├── index.html
-├── membership.html
-├── admin/ # Admin dashboard & login
-├── js/
-└── assets/
