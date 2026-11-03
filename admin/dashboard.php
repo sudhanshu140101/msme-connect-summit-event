@@ -93,6 +93,7 @@ require __DIR__ . '/includes/header.php';
               <td><?= e(format_datetime($row['created_at'])) ?></td>
               <td><a href="view.php?id=<?= (int) $row['id'] ?>">View</a></td>
             </tr>
+          
           <?php endforeach; ?>
         <?php endif; ?>
       </tbody>
