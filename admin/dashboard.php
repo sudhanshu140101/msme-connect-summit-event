@@ -56,6 +56,7 @@ require __DIR__ . '/includes/header.php';
   </article>
 </section>
 
+
 <section class="panel">
   <div class="panel-head">
     <h2>Latest Submissions</h2>
