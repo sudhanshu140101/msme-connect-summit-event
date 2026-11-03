@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/includes/auth_check.php';
-
 $repo = new RegistrationRepository();
 $total = $repo->countAll();
 $today = $repo->countToday();
